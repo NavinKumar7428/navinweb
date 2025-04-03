@@ -5,6 +5,11 @@
 <title>photo  gallery </title>
 </head>
 <style>
+  @keyframes fadeout
+  {
+    from{opacity:0}
+    to{opacity:1}
+  }
 header
 {
 bacground:black;
@@ -23,7 +28,10 @@ header:hover
 {
 box-shadow:10px 10px 70px red;
 }
-
+html
+  {
+  animation:fadeout 4s;
+  }
 
 body 
 {
