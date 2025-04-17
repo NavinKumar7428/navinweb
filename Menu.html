@@ -20,8 +20,8 @@ height:100%;
 }
 nav
 {
-width:40%;
-background:pink;
+width:10%;
+//background:pink;
 text-align:left;
 padding-left:10px;
 margin-top:4px;
@@ -36,7 +36,7 @@ margin-left:-100px;
 
 nav ol li
 {
-display:inline;
+
 padding:20px;
 background:teal;
 margin-left:34px;
@@ -72,13 +72,18 @@ nav ol li a:hover
 color:red;
 }
 
+#menu
+{
+font-size:30px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px)
  {
 
   body{}
-   nav{background:orange;}
+   
    header
  {
   width:100%;
@@ -91,16 +96,23 @@ color:red;
       height:100%;
      }
 
-       nav ol li
-            {
-            }
-       
-     }
+  nav:hover ol li
+  {
+   cursor:pointer;
+   background:green;
+   display:block;
+  }
 
- #menu
- {
-  cursor:pointer;
+
+  body
+
+  {
+   //background:red;
+  }
+
+
  }
+
 
  
 
@@ -121,14 +133,28 @@ body{}
    width:100%;
    height:100%;
   }
- nav ol li
- {
-  display:block;
- }
+ nav{width:100%;}
 
+ #menu{display:none;}
+
+
+ nav ol
+{
+margin-left:0px;
 }
 
+nav ol li
+{
+padding:10px;
+margin-left:-4px;
+}
 
+nav ol li
+{
+display:inline-block
+}
+
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 
@@ -165,11 +191,6 @@ display:inline;
 @media only screen and (min-width: 1200px)
  {
   body{}
-  header
-	
-
-		
-} 
 
 
 }
@@ -183,7 +204,7 @@ display:inline;
 <img src="images/R1.jpg">
 </header>
 <nav>
-     <span id="menu">Menu</span>
+     <span id="menu">&#9776;</span>
              
          <ol>
              <li><a href="index.html">Home</a></li>
