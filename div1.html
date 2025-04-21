@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head><title>Div</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+
+.n {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:150px;
+  }
+
+
+
+
+html
+{
+margin:0px;
+padding:opx;
+}
+
+
+header
+{
+box-sizing:border-box;
+width:99%;
+height:300px;
+background-color:black;
+background-image:url(images/t1.jpg);
+margin:auto;
+margin-top:-6px;
+margin-bottom:10px;
+color:white;
+text-align:center;
+padding-top:2%;
+}
+
+#container
+{
+display:flex;
+//flex-direction:column;
+
+
+//flex-wrap:wrap;
+justify-content:center;
+justify-content:space-between;
+
+}
+
+.col
+{
+margin:10px;
+width:20%;
+font-size:16px;
+text-align:justify;
+border:1px black dotted;
+padding:30px;
+box-shadow:2px 2px 3px gray;
+
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px)
+{
+#container
+{
+flex-direction:column;
+}
+
+header
+{
+height:100px;
+}
+
+.n
+{
+font-size:40px;
+}
+
+.col
+{
+width:80%;
+margin:auto;
+}
+
+
+}
+
+
+/*  Small devices (portrait tablets and large phones, 600px and up)  */
+
+@media only screen and (min-width: 600px) 
+{
+
+
+header
+{
+height:100px;
+}
+
+#container
+{
+flex-direction:column;
+}
+
+.n{
+font-size:40px;
+}
+
+.col
+{
+width:80%;
+margin:auto;
+}
+
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+
+@media only screen and (min-width: 768px)
+ {
+
+header
+{
+height:300px;
+}
+
+.n
+{
+font-size:150px;
+}
+
+#container
+{
+flex-direction:row;
+}
+
+.col
+{
+width:20%;
+}
+
+
+
+}
+
+
+</style>
+
+<body>
+<header class="n">
+INDIAN NEWS
+</header>
+
+<h1> Today News </h1>
+
+<div id="container">
+
+    <div class="col">
+
+<p>
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Why do we use it?
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+<P>
+
+     </div>
+
+
+
+
+
+<div class="col">
+<p>
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+
+<p>
+
+     </div>
+
+
+</div>
+
+
+</body>
+
+
+
+</html>
