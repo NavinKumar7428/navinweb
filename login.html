@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html>
+<head> <title>Login</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<style>
+*{
+margin:0;
+padding:0;
+}
+#main
+{
+background:ray;
+width:40%;
+margin:auto;
+text-align:center;
+margin-top:20px;
+padding:20px;
+}
+table
+{
+width:100%;
+margin:auto;
+padding:20px;
+border:1px solid black;
+border-radius:10px;
+box-shadow:10px 10px 10px gray;
+margin-top:20px;
+}
+
+input[type="text"],[type="password"]{width:100%;height:30px;}
+input[type="submit"],[type="reset"]{width:30%;margin:10px;height:50px;background:#157bba;color:white;}
+
+}
+
+</style>
+<header>Sign in</header>
+
+<tr><td></td></tr>
+
+<body>
+
+<div id="main">
+<table border="0" cellpadding="10">
+<caption style="font-size:30px;margin:20px;">Login Form</caption>
+
+<form action="http://jj.php" Method="get">
+
+<tr>
+<td><label for="userid">User Id</label></td>
+
+
+<td><input id="userid" type="text" placeholder="Type Login id..." required title="Type Login id"></td>
+
+</tr>
+
+
+<tr>
+<td><label for="password">Password</label></td>
+
+
+<td><input id="password" type="text" placeholder="Type Password..." type="password" title="Type password here" required></td>
+
+</tr>
+
+<tr><td></td>
+<td><input type="submit" value="Login"><input type="reset"></td>
+</tr>
+</form>
+
+
+</table>
+
+</div>
+</body>
+
+</html>
