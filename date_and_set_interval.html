@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Creating Digital Clock By Date Class and SetInterval</h1>
+</head>
+<style>
+
+#clock{
+    padding:10px;
+    color:rgb(253, 251, 251);
+    font-size: 30px;
+    font-family: arial black;
+    background: black;
+    width: 200px;
+    text-align: center;
+    box-shadow: 10px 10px 10px gray;
+    margin: auto;
+    cursor: pointer;
+
+}
+
+</style>
+
+
+<body>
+
+    <div id="clock">Clock</div>
+    
+<script>
+
+    var d
+    var t
+    //cumet.write("<h1> "+d)
+    var a =document.getElementById("clock")
+    var clock_is_running="yes"
+    t=setInterval("show()",100)
+
+
+    function show()
+    {
+        d=new Date()
+        //document.write("<h1> "+d.toLocaleTimeString())
+            a.innerHTML=d.toLocaleTimeString()
+            //document.title=d.toLocaleTimeString()
+
+    }
+    a.onclick=function()
+    {
+            if(clock_is_running=="yes")
+            {
+                clearInterval(t)
+                clock_is_running="no"
+                alert("Clock is stop now...")
+
+            }
+            else
+            {
+                t = setInterval("show()" ,1000)
+                clock_is_running="yes"
+                alert("Clock is start now...")
+            }
+
+        document.title= clock_is_running
+
+    }
+
+
+</script>
+
+</body>
+</html>
