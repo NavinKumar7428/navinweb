@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        width: 500px;
+        background: rgb(224, 142, 142);
+        color: white;
+        font-family: arial black;
+        font-size: 30px;
+        padding: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+        margin-top: 200px;
+        
+
+    }
+</style>
+
+<body>
+<div id="box">
+RANDOM COLOR
+</div>
+
+    <script>
+        /*
+        var r,g,b 
+        var b1 = document.createElement("button")
+        document.body.appendChild(b1)
+        b1.style="cursor:pointer;width:50px;height:50px;border-radius:100px;"
+        b1.innerHTML="✨"
+
+        b1.onclick= function()
+        {
+           r=Math.round(Math.random()*255) 
+           g=Math.round(Math.random()*255)
+           b=Math.round(Math.random()*255)
+           var mycolor = `rgb(${r},${g},${b})`
+           b1.style.background=mycolor
+           document.body.style.background=this.style.background
+        }
+           */
+var r,g,b
+var b1 = document.getElementById("box")
+var t
+       
+t = setInterval("changecolor()",100)
+        function changecolor()
+        {
+           r = Math.round(Math.random()*255) 
+           g = Math.round(Math.random()*255)
+           b = Math.round(Math.random()*255)
+           var mycolor = `rgb(${r},${g},${b})`
+           b1.style.background = mycolor
+            r = Math.round(Math.random()*255) 
+           g = Math.round(Math.random()*255)
+           b = Math.round(Math.random()*255)
+           var mycolor = `rgb(${r},${g},${b})`
+
+
+    
+
+           document.body.style.background = mycolor
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
