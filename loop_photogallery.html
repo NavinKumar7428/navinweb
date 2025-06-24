@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.mypic{
+    width:20%;
+    height:30%;
+    margin:50px;
+    box-shadow: 10px 10px 10px gray;
+    cursor:pointer;
+    transition: 0.50s;
+}
+</style>
+
+<body style="text-align:center;">
+    <script>
+        var pic = new Array(8)
+
+        for(var i =0;i<8;i++)
+    {
+        pic[i] = document.createElement("img")
+        pic[i].src=`images/p${i}.jpg`;
+        pic[i].className="mypic";
+        document.body.appendChild(pic[i])
+        pic[i].onclick = function()
+        {
+            this.style.transform="scale(1.50)"
+
+        }
+
+    pic[i].onmouseout = function()
+
+        {
+            this.style.transform="scale(1)"
+        }
+
+    }
+    document.title="Ready"
+    </script>
+    
+</body>
+</html>
