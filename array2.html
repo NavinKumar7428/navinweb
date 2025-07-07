@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=      , initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+    #box
+    {
+        width:90%;
+        background: white;
+        margin:auto;
+        color:black;
+        font-size: 50px;
+        font-family: Arial black;
+        padding: 10px;
+        text-transform: uppercase;
+        text-shadow: 4px 4px 10px gray;
+
+    }
+</style>
+
+<body>
+    
+    <div id="box" class="animate__animated animate__zoomIn">
+        News
+    </div>
+
+    <script>
+        var news = ["IND vs ENG Live Score, 2nd Test Match Day 5: Akash Deep breathes fire, India sniff historic win at Edgbaston",
+        "Now, Google in the dock for its ad market ‘monopoly’" ,"Life-convict out on bail in murder case arrested in rape case: Delhi Police",
+    "‘Burnt out and jobless’: UPSC aspirant shares struggle of juggling toxic job and civil services dream",
+    "Maharashtra minister's Pahalgam attack parallel amid attacks over language row","China, Pakistan behind anti-Rafale jets campaign? France flags 'disinformation' after India’s Operation Sindoor",
+    "PM Modi joins world leaders in greeting Dalai Lama on his 90th birthday"]
+
+
+    var b =document.getElementById("box")
+    c=0
+    var newscount = news.length
+    var i = 1
+    function shownews()
+    {
+        if(i==1)
+            {
+            i=0
+            b.className="animate__animated animate__slideInUp"
+            }
+        else
+        {
+            b.className="animate__animated animate__pulse"
+            i=1
+        }
+
+            document.title = i
+       
+        b.innerHTML = news[c]
+        
+         if(c<newscount-1)
+         {
+            c++
+         }
+         else
+         {
+            c=0
+         }
+    }
+    
+    setInterval("shownews()",1000)
+
+    document.title="No Error"
+    </script>
+
+</body>
+</html>
