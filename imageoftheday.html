@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    .pic
+    {
+        width:70%;
+        height: 400px;
+        display:block;
+        margin:auto;
+        box-shadow:10px 10px 10px gray ;
+    }
+
+    body
+    {
+        text-align: center;
+    }
+
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h1 id="text"></h1>
+    <img id="pic" src="images/b1.jpg" class="pic">
+    
+    <script>
+
+        var d = document.getElementById("pic")
+        var t = document.getElementById("text")
+        var today = new Date()
+        var day = today.getDay()
+
+
+        switch(day)
+        {
+            case 1:
+            t.innerHTML ="Image of Monday"
+            d.src="images/s2.jpg"
+           
+            break;
+
+            case 2:
+            t.innerHTML ="Image of Tuesday"
+            d.src="images/p1.jpg"
+            
+            break;
+
+            case 3:
+            t.innerHTML ="Image of Wednesday"
+            d.src="images/a1.gif"
+           
+            break;
+
+            case 4:
+            t.innerHTML ="Image of Thursday"
+            d.src="images/a3.gif"
+            
+            break;
+
+            case 5:
+            t.innerHTML ="Image of Friday"
+            d.src="images/p3.jpg"
+            
+            break;
+
+            case 6:
+            t.innerHTML ="Image of Saturday"
+            d.src="images/p6.jpg"
+            
+            break;
+
+            case 0:
+            t.innerHTML ="Image of Sunday"
+            d.src="images/a6.gif"
+            
+            break;
+
+            default:
+            t.innerHTML = "Image of the Day"
+            d.src ="images/p5.jpg"
+        }
+
+        document.title="No Error"
+
+    </script>
+    
+</body>
+</html>

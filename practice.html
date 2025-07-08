@@ -1,160 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My HTML & JavaScript Practice Work</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
 
-<!doctype html>
-<html>
-<head> <title></title>
+    header {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    nav {
+      background: #005b99;
+      text-align: center;
+      padding: 10px 0;
+    }
 
-</head>
+    nav a 
+    {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-<style>
- /* Tag Style */
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-nav
+    .d1 {
+      max-width: 900px;
+      height:500px;
+      margin: 30px auto;
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .d1 a:link
 {
-width:70%;
-margin:auto;
-background:black;
-padding:20px;
-text-align:center;
-box-shadow:10px 10px 10px gray;
-}
-
-nav a:link
-{
-color:white;
-text-decoration:none;
-padding:20px;
-transition:0.50s;
-}
-nav a:visited
-{
-color:white;
-}
-
-nav a:hover
-{
-text-decoration:underline;
-color:blue;
-background:pink;
-}
-
-.d1
-{
-width:70%;
-background: black;
-margin: auto;
-padding:20px;
-text-align:center;
-box-shadow:10px 10px 10px gray;
-}
-
- .d1 a:link
-{
-color:white;
+color:black;
 text-decoration:none;
 padding:20px;
 transition:0.50s;
 }
 .d1 a:visited
 {
-color:white;
+color:black;
 }
 
 .d1 a:hover
 {
 text-decoration:underline;
-color:blue;
-background:pink;
+background-color:gray;
+border-radius: 24px;
 
 }
 
- 
+ .d2 {
+      max-width: 900px;
+      height:900px;
+      margin: 30px auto;
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-.d2
+    .d2 a:link
 {
-width:85%;
-background: black;
-margin: auto;
-padding:20px;
-text-align:center;
-box-shadow:10px 10px 10px gray;
-}
-
- .d2 a:link
-{
-color:white;
+color:black;
 text-decoration:none;
 padding:20px;
 transition:0.50s;
 }
 .d2 a:visited
 {
-color:white;
+color:black;
 }
 
 .d2 a:hover
 {
 text-decoration:underline;
-color:blue;
-background:pink;
+background-color:gray;
+border-radius: 24px;
 
 }
- 
 
 
 
-  
-</style>
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 5px;
+    }
+
+   
+
+    footer {
+      background: #005b99;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
 <body>
 
+  <header>
+    <h1>My HTML & JavaScript Practice Work</h1>
+  </header>
 
-<nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="MyProject.html">Project</a>
+     </nav>
 
-<a href="photogallery.html">Photo Show</a>
+  <div class="d1">
+    <h2>Daily Html Practice</h2>
+	<a href="photogallery.html">Photo Show</a>
+  <br/>
+  <br/>
+  <br/>
 
  <a href="List.html">List in HTML</a>
+  <br/>
+  <br/>
+  <br/>
 
   <a href="Menu.html">Menu</a>
+   <br/>
+  <br/>
+  <br/>
  
  <a href="table.html">Table</a>
+  <br/>
+  <br/>
+  <br/>
 
  <a href="div1.html">Article</a>
+  <br/>
+  <br/>
+  <br/>
  
  <a href="login.html">Login Form</a>
+  <br/>
+  <br/>
+  <br/>
  <a href="banner1.html">Banner1</a>
+  <br/>
+  <br/>
+  <br/>
  <a href="banner2.html">Banner2</a>
- 
+  <br/>
+  <br/>
+  <br/>
 
-
-</nav>
-<br/>
-
-<div class="d1">
-    <a href="js.html">Js first</a>
-     <a href="div.html">Div</a>
-      <a href="text1.html">Text1</a>
-      <a href="createimage.html">images</a>
-       <a href="event1.html">Working With Event in JavaScript</a>
-     <a href="interval.html">Interval in JavaScript</a>
-      <a href="date_and_set_interval.html">Date_and_Set_Interval in JavaScript</a>
 </div>
-<br/>
+
 <div class="d2">
-  <a href="colorplate.html">Colorpallete</a>
-  <a href="background.html">Random color</a>
+    <h2>Daily JavaScript Practice</h2>
+     <a href="js.html">Js first</a>
+     <br/>
+    <br/>
+    <br/>
+     <a href="div.html">Text with Image in JavaScript</a>
+     <br/>
+     <br/>
+     <br/>
+      <a href="text1.html">Text in JavaScript</a>
+      <br/>
+  <br/>
+  <br/>
+      <a href="createimage.html">Image with Border in JavaScript</a>
+      <br/>
+  <br/>
+  <br/>
+       <a href="event1.html">Working With Event in JavaScript</a>
+       <br/>
+  <br/>
+  <br/>
+     <a href="interval.html">Interval in JavaScript</a>
+     <br/>
+  <br/>
+  <br/>
+      <a href="date_and_set_interval.html">Date and Set Interval in JavaScript</a>
+      <br/>
+  <br/>
+  <br/>
+     <a href="colorplate.html">Colorpallete in JavaScript</a>
+     <br/>
+  <br/>
+  <br/>
+  <a href="background.html">Random color in JavaScript</a>
+  <br/>
+  <br/>
+  <br/>
    <a href="scrolling_img.html">Scrolling Img in JavaScript</a>
+   <br/>
+  <br/>
+  <br/>
    <a href="loop2.html">Loop in JavaScript</a>
+   <br/>
+  <br/>
+  <br/>
     <a href="loop_photogallery.html">Loop photogallery in JavaScript</a>
-    <a href="whileloop.html">Whileloop</a>
+    <br/>
+  <br/>
+  <br/>
+    <a href="whileloop.html">Whileloop in JavaScript</a>
+    <br/>
+  <br/>
+  <br/>
     <a href="array2.html">Array in JawaScript</a>
+    <br/>
+  <br/>
+  <br/>
+  <a href="imageoftheday.html">Image of The Day in JawaScript</a>
 
 
-</div>
+    </div>
 
+ 
 </body>
-
-
-
-
 </html>
