@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #banner
+    {
+        width:70%;
+        height:400px;
+        margin:auto;
+        transition:2s;
+    }
+    .pic
+    {
+        width:70%;
+        height:400px;
+        position:absolute;
+        top:10px;
+        left:160px;
+        transition: 2s;
+        
+    }
+</style>
+
+<body onLoad="run_banner()">
+    
+    <div id ="banner">
+        <img id="d5" src="images/d5.jpg" class="pic">
+        <img id="d4" src="images/d4.jpg" class="pic">
+        <img id="d3" src="images/d3.jpg" class="pic">
+        <img id="d2" src="images/d2.jpg" class="pic">
+        <img id="d1" src="images/d1.jpg" class="pic">
+
+    </div>
+    <script>
+
+        var d1 = document.getElementById("d1")
+        var d2 = document.getElementById("d2")
+        var d3 = document.getElementById("d3")
+        var d4 = document.getElementById("d4")
+        var d5 = document.getElementById("d5")
+
+
+        c = 0
+
+        function run_banner()
+        {
+            if(c<=5)
+            {
+                c++
+            }
+            else
+            {
+                c=1
+            }
+
+            switch(c)
+            {
+                    case 1:
+                    d1.style.opacity = "0"
+                    d1.style.transform="scale(0) rotate(360deg)"
+                    break;
+
+                    case 2:
+                    d2.style.opacity = "0"
+                    d2.style.transform="scale(0) rotate(360deg)"
+                    break;
+
+                    case 3:
+                    d3.style.opacity = "0"
+                    d3.style.transform="scale(0) rotate(360deg)"
+                    break;
+
+                    case 4:
+                    d4.style.opacity = "0"
+                    d4.style.transform="scale(0) rotate(360deg)"
+                    break;
+
+                    case 5:
+                    
+
+                    break;
+
+                    case 6:
+                        d1.style.opacity = "1"
+                          d2.style.opacity = "1"
+                          d3.style.opacity = "1"
+                          d4.style.opacity = "1"
+
+                          d1.style.transform="scale(1) rotate(0deg)"
+                          d2.style.transform="scale(1) rotate(0deg)"
+                          d3.style.transform="scale(1) rotate(0deg)"
+                          d4.style.transform="scale(1) rotate(0deg)"
+
+
+                          break;
+
+
+            }
+
+            document.title = c
+
+            setTimeout("run_banner()",3000)
+
+        }
+        
+    </script>
+</body>
+</html>
