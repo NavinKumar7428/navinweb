@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pic{
+        width:20%;
+        position:absolute;
+        top:0px;
+        left:0px;
+
+    }
+   
+
+    body{
+      width:100%;
+      margin:0px;
+      overflow: hidden;
+    }
+</style>
+
+<body>
+  <div id="main" style="width:300%; overflow-x:hidden;">
+  <img src ="images/back1.png">
+  
+  <img style="transform:rotateY(160deg);margin-left:-50px"  src="images/back1.png">
+  
+  </div>
+
+<img id="bird" src="images/bird.gif" class="pic">
+<script>
+  var b = document.getElementById("bird")
+  var m =document.getElementById("main")
+  var L = 0
+  var t = 0
+  var k;
+  var f = 0;
+  function f1(e)
+  {
+    k = e.keyCode
+   // document.title = k
+    switch(k)
+    {
+      /* up Arrow */   
+      case 38:
+        if(t>-90)
+        {
+          t-=10
+        }
+        
+        b.style.top = t+"px" 
+        break;
+
+        /*down Arrow*/
+        case 40:
+          if(t<90)
+            {
+              t+=10
+            }
+            b.style.top = t+"px"
+            break;
+
+            /* left Arrow*/
+            case 37:
+              if(f<-20)
+            {
+              f=f+10
+
+            }
+            m.style.marginLeft=f+"px"
+                //b.style.left = L+"px"
+                b.style.transform="rotateY(0deg)"
+                 b.style.transform="rotateY(180deg)"
+
+                break;
+
+                /* right Arrow*/
+                case 39:
+
+                m.style.marginLeft=f+"px"
+
+                if(L<=1000)
+                {
+                    L+=10
+
+                }
+                else
+                {
+                    L=-200
+                }
+
+                //document.title = L
+                if(f>-700)
+                {
+                  f=f-10
+                }
+                
+
+                b.style.transform="rotateY(0deg)"
+                b.style.left = L+"px"
+
+                break;
+    }
+  } 
+  document.addEventListener("keydown",f1) 
+</script>    
+</body>
+</html>
