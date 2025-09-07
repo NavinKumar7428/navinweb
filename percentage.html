@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Percentage Calculator – Mobile App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: url(images/b4.jpeg) no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      position:absolute ;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .app {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      z-index: 1;
+      text-align: center;
+    }
+
+    header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #fbbf24;
+      letter-spacing: 1px;
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      outline: none;
+      width: 80%;
+      margin: auto;
+      background: rgba(255,255,255,0.85);
+    }
+
+    button {
+      width: 100%;
+      margin: auto;
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      font-size: 20px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #f97316, #fbbf24);
+      color: #000;
+      cursor: pointer;
+      transition: transform 0.1s, filter 0.2s;
+    }
+
+    button:hover {
+    filter: brightness(1.1);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0,0,0,0.4);
+      padding: 14px;
+      border-radius: 14px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #d1d5db;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="app">
+    <header>Percentage Calculator</header>
+    <div class="inputs">
+      <input type="number" id="value" placeholder="Enter Value (e.g. 200)" />
+      <input type="number" id="percentage" placeholder="Enter Percentage (e.g. 15)" />
+      <button onclick="calculatePercentage()">Calculate</button>
+    </div>
+    <div class="result" id="result">Result will appear here</div>
+    <footer>Made with ❤️ by Navin</footer>
+  </div>
+
+  <script>
+    function calculatePercentage() {
+      const value = parseFloat(document.getElementById('value').value);
+      const percentage = parseFloat(document.getElementById('percentage').value);
+      const resultBox = document.getElementById('result');
+
+      if (isNaN(value) || isNaN(percentage)) {
+        resultBox.innerText = '⚠️ Please enter valid numbers';
+        return;
+      }
+
+      const result = (value * percentage) / 100;
+      resultBox.innerText = `${percentage}% of ${value} = ${result}`;
+    }
+  </script>
+</body>
+</html>
