@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Multiplication Table – Mobile App Style</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: #fff;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      width: 100%;
+      padding: 16px;
+      text-align: center;
+      background:rgb(1, 1, 110);
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .container {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      background: #fff;
+      color: #000;
+      margin-top: 16px;
+      border-radius: 16px 16px 0 0;
+      padding: 20px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+    }
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    label {
+      font-size: 16px;
+      color: #374151;
+    }
+    input {
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      font-size: 20px;
+      width: 90%;
+      margin: auto;
+    }
+    button {
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      background: rgb(1, 1, 110);
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: rgb(1, 1, 110);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #f3f4f6;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    th {
+      background:rgb(1, 1, 110);
+      color: white;
+      border-radius: 12px 12px 0 0;
+    }
+    tr:nth-child(even) td 
+    {
+      font-size: 24px;
+      background: #f9fafb;
+    }
+  </style>
+</head>
+<body>
+  <header>Multiplication Table</header>
+  <div class="container">
+    <div class="controls">
+      <label>Enter a number:</label>
+      <input type="number" id="num" value="5" min="1" />
+      <label>Up to:</label>
+      <input type="number" id="upto" value="10" min="1" />
+      <button onclick="generateTable()">Generate Table</button>
+    </div>
+    <div id="tableContainer"></div>
+  </div>
+
+  <script>
+    function generateTable() {
+      const num = parseInt(document.getElementById('num').value);
+      const upto = parseInt(document.getElementById('upto').value);
+      const container = document.getElementById('tableContainer');
+
+      if (isNaN(num) || isNaN(upto)) {
+        container.innerHTML = '<p style="color:red">Please enter valid numbers.</p>';
+        return;
+      }
+
+      let html = '<table>';
+      html += `<tr><th colspan="2">Table of ${num}</th></tr>`;
+
+      for (let i = 1; i <= upto; i++) {
+        html += `<tr><td>${num} × ${i}</td><td>${num * i}</td></tr>`;
+      }
+
+      html += '</table>';
+      container.innerHTML = html;
+    }
+
+    window.onload = generateTable;
+  </script>
+</body>
+</html>
