@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    body{
+        background: rgb(8, 50, 67);
+        overflow-x: hidden;
+    }
+.img1
+{
+    width:350px;
+    height:200px;
+    padding: 30px;
+    position: absolute;
+    top:-10px;
+    opacity:1;
+    left:-500px;
+    box-shadow: 5px 5px 20px gray;
+}  
+
+.img2
+{
+    width:350px;
+    height:200px;
+    padding: 30px;
+    position: absolute;
+    top:450px;
+    opacity:1;
+    right:-500px;
+    box-shadow: 5px 5px 20px gray;
+}    
+
+
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<body>
+    <div id="img">
+        <img  class="img1" src="images/a1.gif">
+        <img  class="img2" src="images/a3.gif">
+
+    </div>
+    <script>
+        $(document).ready(function()
+    {
+      
+        $(".img1").animate({left:"300px"},500).delay(1000).animate({top:"200px"}).delay(500).animate({height:+"250"}).delay(1000).animate({opacity:"0"},1000)
+    });
+
+
+     $(document).ready(function()
+    {
+      
+        $(".img2").animate({left:"800px"},500).delay(1000).animate({top:"200px"}).delay(500).animate({height:+"250"}).delay(1000).animate({opacity:"0"},1000)
+    });
+     
+    document.title ="Ready"
+    </script>
+    
+</body>
+</html>
