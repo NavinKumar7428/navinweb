@@ -48,18 +48,43 @@
 
     </div>
     <script>
-        $(document).ready(function()
+        var s =  document.createElement("audio")
+        s.src ="#"
+        document.body.appendChild(s)
+        s.play()
+
+
+    $(document).ready(function()
     {
       
-        $(".img1").animate({left:"300px"},500).delay(1000).animate({top:"200px"}).delay(500).animate({height:+"250"}).delay(1000).animate({opacity:"0"},1000)
+        $(".img1").animate({left:"300px"},500).delay(1000).animate({top:"200px"}).delay(500).animate({height:+"250"}).delay(1000).animate({opacity:"0"},1000).delay(1000).animate({opacity:"1"},1000)
+    
+        $(".img1").animate({left:"300"},1000).delay(500).animate({left:"500px"},1000).delay(1000);
+
+        $(".img1").animate({left:"1400"},100)
+
+        $(".img1").animate({opacity:"0",left:+"500"},0).animate({opacity:"1"},3000,showpic)
+
+
     });
 
 
      $(document).ready(function()
     {
       
-        $(".img2").animate({left:"800px"},500).delay(1000).animate({top:"200px"}).delay(500).animate({height:+"250"}).delay(1000).animate({opacity:"0"},1000)
+        $(".img2").animate({left:"800px"},500).delay(1000).animate({top:"200px"}).delay(500).animate({height:+"250"}).delay(1000).animate({opacity:"0"},1000).delay(1000).animate({opacity:"1"},1000)
+
+         $(".img2").animate({left:"300"},1000).delay(500).animate({left:"500px"},1000).delay(1000);
+
+        $(".img2").animate({left:"-700"},100)
+
+        $(".img2").animate({opacity:"0",left:+"500"},0).animate({opacity:"1"},3000,showpic)
     });
+
+    function showpic()
+    {
+       // document.body.style.backgroundImage="url(images/p1.jpg)"
+    }
      
     document.title ="Ready"
     </script>
