@@ -14,13 +14,41 @@
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
       overflow-x: hidden;
-    }
+      
+      }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+    }
+
+    h3{
+      color: #0b8fc8;
+      font-size: 1.2em;
+      font-family: "Geologic", sans-serif;
+      }
+    h3 > span {
+      position:relative;
+      display:inline-block;
+      color:#edb97d;
+      height: 1.25em;
+      vertical-align: bottom;
+      overflow: hidden;
+    }
+
+    h3 > span > span {
+      display:block;
+      animation:animatewords 9s infinite ease;
+    }
+
+    @keyframes animatewords{
+      0%{transform: translateY(0%);}
+      25%{transform: translateY(-100%);}
+      50%{transform: translateY(-200%);}
+      75%{transform: translateY(-300%);}
+      100%{transform: translateY(-400%);}
     }
 
     /* Navbar */
@@ -38,7 +66,8 @@
     }
 
     nav h1 {
-      font-size: 1.5rem;
+     color: #0b8fc8;
+      font-size: 1.6rem;
       font-weight: 700;
       letter-spacing: 2px;
     }
@@ -245,11 +274,24 @@ transition:0.50s;
     </ul>
   </nav>
 
+  
   <!-- Hero Section -->
   <section class="hero" id="hero">
-    <img src="images/pf1.png" alt="Profile">
+    <img src="images/pf11.png" alt="Profile">
     <h2>Hello, I'm Navin </h2>
-    <p>Graphics & Web Designer</p>
+    <h3>
+    I'M A
+    <span>
+    <span>GRAPHIC DESIGNER</span>
+    <span>CODER</span>
+    <span>PROGRAMMER</span>
+    <span>DESIGNER</span>
+    </span>
+    
+  </h3>
+
+    
+    
   </section>
 
   <!-- About Section -->
