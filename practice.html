@@ -5,26 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My HTML & JavaScript Practice Work</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: white;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+     body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
     }
 
     header {
-      background-color: black;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
       text-align: center;
       padding: 30px 20px;
     }
 
     nav {
-      background: gray;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       //width: 50%;
       //margin:auto;
       text-align: center;
       padding: 10px 0;
+      
     }
 
     nav a 
@@ -33,11 +40,13 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      
     }
 
     nav a:hover {
       text-decoration: underline;
-      color: black;
+      color: rgb(254, 253, 253);
+       
     }
 
     .d1 {
@@ -45,7 +54,7 @@
       height:500px;
       margin: 30px auto;
       text-align: center;
-      background: #fff;
+      //background: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -53,20 +62,20 @@
 
     .d1 a:link
 {
-color:black;
+color:white;
 text-decoration:none;
 padding:20px;
 transition:0.50s;
 }
 .d1 a:visited
 {
-color:black;
+color:white;
 }
 
 .d1 a:hover
 {
 text-decoration:underline;
-background-color:gray;
+background-color:black;
 border-radius: 24px;
 
 }
@@ -76,7 +85,7 @@ border-radius: 24px;
       height:100%;
       margin: 30px auto;
       text-align: center;
-      background: #fff;
+      //background: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -84,42 +93,45 @@ border-radius: 24px;
 
     .d2 a:link
 {
-color:black;
+color:white;
 text-decoration:none;
 padding:20px;
 transition:0.50s;
 }
 .d2 a:visited
 {
-color:black;
+color:white;
 }
 
 .d2 a:hover
 {
 text-decoration:underline;
-background-color:gray;
+background-color:black;
 border-radius: 24px;
 
 }
 
 
 
-    h2 {
-      color: black;
+    h2 
+    {
+      color: white;
       border-bottom: 2px solid #007acc;
       padding-bottom: 5px;
     }
 
    
 
-    footer {
-  background-color: #222;
+footer
+{
+  background:  linear-gradient(1deg, #0f2027, #203a43, #2c5364);
   color: #fff;
   padding: 40px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-container {
+.footer-container 
+{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -134,7 +146,7 @@ border-radius: 24px;
 }
 
 .footer-column h3 {
-  border-bottom: 2px solid #555;
+  border-bottom: 2px solid #007acc;
   padding-bottom: 10px;
   margin-bottom: 15px;
   font-size: 20px;
@@ -181,6 +193,32 @@ border-radius: 24px;
 
 }
 
+    .background {
+      position: fixed;
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      animation: float 10s infinite linear;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh) scale(0.5);}
+      to { transform: translateY(-10vh) scale(1.5);}
+    }
+
+    @media(max-width:768px) {
+      nav ul { display: none; }
+    }
+
 
 
 
@@ -188,174 +226,174 @@ border-radius: 24px;
 </head>
 <body>
 
+  
+
   <header>
     <h1>My HTML & JavaScript Practice Work</h1>
   </header>
-
+<div class="background"></div>
   <nav>
     <a href="index.html">Home</a>
     <a href="MyProject.html">Project</a>
      </nav>
 
   <div class="d1">
-    <h2>Daily Html Practice</h2>
-    <br/>
-	<a href="photogallery.html">Photo Show</a>
+<h2>Daily Html Practice</h2>
+  <br/>
+<a href="photogallery.html">Photo Show</a>
   <br/>
   <br/>
   <br/>
     
- <a href="List.html">List in HTML</a>
+<a href="List.html">List in HTML</a>
   <br/>
   <br/>
   <br/>
 
-  <a href="Menu.html">Menu</a>
-   <br/>
+<a href="Menu.html">Menu</a>
+  <br/>
   <br/>
   <br/>
  
- <a href="table.html">Table</a>
+<a href="table.html">Table</a>
   <br/>
   <br/>
   <br/>
 
- <a href="div1.html">Article</a>
+<a href="div1.html">Article</a>
   <br/>
   <br/>
   <br/>
  
- <a href="login.html">Login Form</a>
+<a href="login.html">Login Form</a>
   <br/>
   <br/>
   <br/>
- <a href="banner1.html">Banner1</a>
+<a href="banner1.html">Banner1</a>
   <br/>
   <br/>
   <br/>
- <a href="banner2.html">Banner2</a>
+<a href="banner2.html">Banner2</a>
   <br/>
   <br/>
   <br/>
 
 </div>
 
-<div class="d2">
-    <h2>Daily JavaScript Practice</h2>
-    <br/>
-     <a href="js.html">Js first</a>
-     <br/>
-    <br/>
-    <br/>
-     <a href="div.html">Text with Image in JavaScript</a>
-     <br/>
-     <br/>
-     <br/>
-      <a href="text1.html">Text in JavaScript</a>
-      <br/>
+  <div class="d2">
+<h2>Daily JavaScript Practice</h2>
+  <br/>
+<a href="js.html">Js first</a>
   <br/>
   <br/>
-      <a href="createimage.html">Image with Border in JavaScript</a>
-      <br/>
+  <br/>
+<a href="div.html">Text with Image in JavaScript</a>
   <br/>
   <br/>
-       <a href="event1.html">Working With Event in JavaScript</a>
-       <br/>
+  <br/>
+<a href="text1.html">Text in JavaScript</a>
   <br/>
   <br/>
-     <a href="interval.html">Interval in JavaScript</a>
-     <br/>
+  <br/>
+<a href="createimage.html">Image with Border in JavaScript</a>
   <br/>
   <br/>
-      <a href="date_and_set_interval.html">Date and Set Interval in JavaScript</a>
-      <br/>
+  <br/>
+<a href="event1.html">Working With Event in JavaScript</a>
   <br/>
   <br/>
-     <a href="colorplate.html">Colorpallete in JavaScript</a>
-     <br/>
+  <br/>
+<a href="date_and_set_interval.html">Date and Set Interval in JavaScript</a>
+  <br/>
+  <br/>
+  <br/>
+<a href="colorplate.html">Colorpallete in JavaScript</a>
+  <br/>
   <br/>
   <br/>
   <a href="background.html">Random color in JavaScript</a>
   <br/>
   <br/>
   <br/>
-   <a href="scrolling_img.html">Scrolling Img in JavaScript</a>
-   <br/>
+<a href="scrolling_img.html">Scrolling Img in JavaScript</a>
   <br/>
   <br/>
-   <a href="loop2.html">Loop in JavaScript</a>
-   <br/>
+  <br/>
+<a href="loop2.html">Loop in JavaScript</a>
   <br/>
   <br/>
-    <a href="loop_photogallery.html">Loop photogallery in JavaScript</a>
-    <br/>
+  <br/>
+<a href="loop_photogallery.html">Loop photogallery in JavaScript</a>
   <br/>
   <br/>
-    <a href="whileloop.html">Whileloop in JavaScript</a>
-    <br/>
+  <br/>
+<a href="whileloop.html">Whileloop in JavaScript</a>
   <br/>
   <br/>
-    <a href="array2.html">Array in JavaScript</a>
-    <br/>
+  <br/>
+<a href="array2.html">Array in JavaScript</a>
+  <br/>
   <br/>
   <br/>
   <a href="imageoftheday.html">Image of The Day in JavaScript</a>
-<br/>
+  <br/>
   <br/>
   <br/>
 <a href="banner3.html">Banner in JavaScript</a>
-<br/>
+  <br/>
   <br/>
   <br/>
 <a href="scrollevent.html">Scrollevent in JavaScript</a>
-<br/>
+  <br/>
   <br/>
   <br/>
 <a href="scrollevent2.html">Scrollevent2 in JavaScript</a>
-<br/>
+  <br/>
   <br/>
   <br/>
 <a href="keybord.html">Keybord Animation in JavaScript</a>
-<br/>
+  <br/>
   <br/>
   <br/>
 <a href="keybord2.html">Keybord Animation with background in JavaScript</a>
-<br/>
+  <br/>
   <br/>
   <br/>
 <a href="cursor position.html">cursor position in JavaScript</a>
 
-<br/>
+  <br/>
   <br/>
   <br/>
 <a href="dynamickimage.html">dynamicimage in JavaScript</a>
 
-<br/>
   <br/>
   <br/>
+  <br/>
+
 <a href="table3.html">Multiplication Table in JavaScript</a>
 
-<br/>
+  <br/>
   <br/>
   <br/>
 <a href="percentage.html">Percentage Calculator  in JavaScript</a>
 
-    </div>
+  </div>
 
-    <div class="d2">
-    <h2>Daily Jquery Practice</h2>
+  <div class="d2">
+<h2>Daily Jquery Practice</h2>
 
   <br/>
+
 <a href="Jquery/jquery.html">Show/Hide  in Jquery</a>
   <br/>
   <br/>
   <br/>
-  <a href="jq3.html">selector  in Jquery</a>
+<a href="jq3.html">selector  in Jquery</a>
   <br/>
   <br/>
   <br/>
-  <a href="jqanimate.html">Animation  in Jquery</a>
-
+<a href="jqanimate.html">Animation  in Jquery</a>
+    
     </div>
 
 
@@ -387,7 +425,20 @@ border-radius: 24px;
 
 
 
-
+  <script>
+    // Generate floating circles for animated background
+    const background = document.querySelector('.background');
+    for(let i=0; i<20; i++){
+      const circle = document.createElement('div');
+      circle.classList.add('circle');
+      const size = Math.random()*80+20;
+      circle.style.width = size + 'px';
+      circle.style.height = size + 'px';
+      circle.style.left = Math.random()*100 + 'vw';
+      circle.style.animationDuration = (Math.random()*20+10) + 's';
+      background.appendChild(circle);
+    }
+  </script>
  
 </body>
 </html>
