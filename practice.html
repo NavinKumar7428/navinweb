@@ -49,36 +49,7 @@
        
     }
 
-    .d1 {
-      max-width: 900px;
-      height:500px;
-      margin: 30px auto;
-      text-align: center;
-      //background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .d1 a:link
-{
-color:white;
-text-decoration:none;
-padding:20px;
-transition:0.50s;
-}
-.d1 a:visited
-{
-color:white;
-}
-
-.d1 a:hover
-{
-text-decoration:underline;
-background-color:black;
-border-radius: 24px;
-
-}
+    
 
  .d2 {
       max-width: 900px;
@@ -219,6 +190,78 @@ footer
       nav ul { display: none; }
     }
 
+    section {
+      min-height: 100vh;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-radius: 8px;
+      margin: 30px auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      height:100%;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #0b8fc8;
+    }
+    
+    .projects 
+    {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 1000px;
+      
+      
+    }
+
+    .card 
+     {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 1.5rem;
+      overflow:hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 5px 10px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit: cover;
+    }
+
+    .card:hover {
+      cursor: pointer;
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .card a:link
+{
+color:white;
+text-decoration:none;
+//padding:10px;
+transition:0.50s;
+}
+
+.card a:visited
+{
+ color: white;
+}
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      padding: 5px;
+    }
 
 
 
@@ -237,49 +280,78 @@ footer
     <a href="index.html#projects">Project</a>
      </nav>
 
-  <div class="d1">
-<h2>Daily Html Practice</h2>
-  <br/>
-<a href="photogallery.html">Photo Show</a>
-  <br/>
-  <br/>
-  <br/>
+      <section id="projects">
+        <h2>Daily Html Practice</h2>
     
-<a href="List.html">List in HTML</a>
-  <br/>
-  <br/>
-  <br/>
+    <div class="projects">
+      
+      <div class="card">
+        <a href="photogallery.html" alt="photoshow">
+          <img src ="images/p0.jpg" >
+        <h3>Photo Show</h3>
+        </a>
+      </div>
 
-<a href="Menu.html">Menu</a>
-  <br/>
-  <br/>
-  <br/>
- 
-<a href="table.html">Table</a>
-  <br/>
-  <br/>
-  <br/>
+      <div class="card">
+        <a href="List.html" alt="list">
+          <img src ="images/a44.jpeg">
+        <h3>List in HTML</h3>
+        
+      </a>
+      </div>
+      <div class="card">
+        <a href="Menu.html" alt="Menu">
+          <img src ="images/r4.jpg">
+        <h3>Menu in HTML</h3>
+       
+      </a>
+      </div>
 
-<a href="div1.html">Article</a>
-  <br/>
-  <br/>
-  <br/>
- 
-<a href="login.html">Login Form</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="banner1.html">Banner1</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="banner2.html">Banner2</a>
-  <br/>
-  <br/>
-  <br/>
+      <div class="card">
+        <a href="table.html" alt="table">
+          <img src ="images/55.png">
+        <h3>Table in HTML </h3>
+       
+      </a>
+      </div>
 
-</div>
+      <div class="card">
+        <a href="div1.html" alt="article">
+          <img src ="images/b33.jpeg">
+        <h3>Article in HTML </h3>
+       
+      </a>
+      </div>
 
+      <div class="card">
+        <a href="login.html" alt="Login Form">
+          <img src ="images/r5.jpg">
+        <h3>Login Form in HTML </h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="banner1.html" alt="banner1">
+          <img src ="images/p6.jpg">
+        <h3>Banner1 in HTML</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="banner2.html" alt="banner2">
+          <img src ="images/a1.gif">
+        <h3>Banner2 in HTML</h3>
+       
+      </a>
+      </div>
+
+    </div>
+  </section>
+
+  
+<section id="projects">
   <div class="d2">
 <h2>Daily JavaScript Practice</h2>
   <br/>
@@ -379,27 +451,67 @@ footer
 
   </div>
 
-  <div class="d2">
-<h2>Daily Jquery Practice</h2>
+</section>
 
-  <br/>
-
-<a href="Jquery/jquery.html">Show/Hide  in Jquery</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="jq3.html">Selector  in Jquery</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="jqanimate.html">Animation  in Jquery</a>
+  <section id="projects">
+        <h2>Daily Jquery Practice</h2>
     
+    <div class="projects">
+      
+      <div class="card">
+        <a href="Jquery/jquery.html" alt="show/hide">
+          <img src ="images/r44.png" >
+        <h3>Show/Hide  in Jquery</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="jq3.html" alt="selector">
+          <img src ="images/p4.jpg">
+        <h3>Selector  in Jquery</h3>
+        
+      </a>
+      </div>
+      <div class="card">
+        <a href="jqanimate.html" alt="animation">
+          <img src ="images/a3.gif">
+        <h3>Animation  in Jquery</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="jqcycle.html" alt="cycle">
+          <img src ="images/c1.jpg">
+        <h3>Transition: Cycle in Jquery</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="jqplugin.html" alt="tile">
+          <img src ="images/a2.gif">
+        <h3>Transition: Tile in Jquery</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="jqmenu.html" alt="menu">
+          <img src ="images/m1.jpg">
+        <h3>Menu in Jquery</h3>
+       
+      </a>
+      </div>
+
+
     </div>
+  </section>
 
+ <br/>
+ <br/>
 
-
-
-      <footer>
+    <footer>
     <div class="footer-container">
     
     <div class="footer-column">
