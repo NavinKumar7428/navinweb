@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: rgb(8, 50, 67);
+        overflow-x: hidden;
+    }
+    @keyframes ani1
+    {
+     from{transform:rotateY(0deg) scale(1)}
+     to{transform:rotateY(180deg) scale(2)}
+
+    }
+
+    @keyframes ani2
+    {
+     from{transform:rotateY(-180deg) scale(1)}
+     to{transform:rotateY(0deg) scale(2)}
+    }
+
+    #box{
+        width:500px;
+        height:500px;
+        margin:auto;
+        margin-top: 120px;
+        text-align: center;
+        perspective: 250px;
+        box-shadow: 1px 1px 8px rgb(1, 32, 44);
+    }
+
+    #one
+    {
+        width:200px;
+        height:200px;
+        background:red;
+        position: relative;
+        left:30%;
+        top:30%;
+        background-image:url(images/a8.gif);
+        background-size: cover;
+        backface-visibility: hidden;
+        animation: ani1 5s infinite alternate;
+        //box-shadow: 5px 5px 10px rgb(161, 136, 136);
+
+        
+    }
+
+     #two
+    {
+        width:200px;
+        height:200px;
+        background:yellow;
+        position: relative;
+        left:30%;
+        top:-10%;
+        background-image:url(images/a7.gif);
+        background-size: cover;
+        backface-visibility: hidden;
+        animation: ani1 5s infinite alternate;
+        //box-shadow: 5px 5px 10px gray;
+
+        
+    }
+
+</style>
+<body>
+    <div id="box">
+
+        <div id="one"></div>
+        <div id="two"></div>
+    </div>
+    
+    <script>
+        var d1 =document.getElementById("one")
+         var d2 =document.getElementById("two")
+         var yr="-180"
+
+         d2.onclick=function()
+         {
+            d2.style.cursor="pointer"
+            d2.style.transition="12s"
+            yr+=0.52
+         }
+
+         d1.style.animation="ani1 5s infinite alternate"
+         d2.style.animation="ani2 5s infinite alternate"
+    </script>
+</body>
+</html>
