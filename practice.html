@@ -10,6 +10,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
 
      body {
@@ -48,41 +49,6 @@
       color: rgb(254, 253, 253);
        
     }
-
-    
-
- .d2 {
-      max-width: 900px;
-      height:100%;
-      margin: 30px auto;
-      text-align: center;
-      //background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .d2 a:link
-{
-color:white;
-text-decoration:none;
-padding:20px;
-transition:0.50s;
-}
-.d2 a:visited
-{
-color:white;
-}
-
-.d2 a:hover
-{
-text-decoration:underline;
-background-color:black;
-border-radius: 24px;
-
-}
-
-
 
     h2 
     {
@@ -210,7 +176,7 @@ footer
       color: #0b8fc8;
     }
     
-    .projects 
+    .practices
     {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -233,6 +199,7 @@ footer
     }
 
     .card img{
+      border-radius: 15px;
       width:100%;
       height:180px;
       object-fit: cover;
@@ -278,12 +245,15 @@ transition:0.50s;
   <nav>
     <a href="index.html">Home</a>
     <a href="index.html#projects">Project</a>
+    <a href="practice.html#practices">HTML</a>
+    <a href="practice.html#first">JavaScript</a>
+    <a href="practice.html#jq">Jquery</a>
      </nav>
 
-      <section id="projects">
+      <section id="practices">
         <h2>Daily Html Practice</h2>
     
-    <div class="projects">
+    <div class="practices">
       
       <div class="card">
         <a href="photogallery.html" alt="photoshow">
@@ -316,6 +286,14 @@ transition:0.50s;
       </div>
 
       <div class="card">
+        <a href="media in html.html" alt="media">
+          <img src ="images/js11.jpg">
+        <h3>Background Video  in HTML </h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
         <a href="div1.html" alt="article">
           <img src ="images/b33.jpeg">
         <h3>Article in HTML </h3>
@@ -341,8 +319,16 @@ transition:0.50s;
 
       <div class="card">
         <a href="banner2.html" alt="banner2">
-          <img src ="images/a1.gif">
+          <img src ="images/a4.gif">
         <h3>Banner2 in HTML</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="flag.html" alt="banner2">
+          <img src ="images/flag.png">
+        <h3>india</h3>
        
       </a>
       </div>
@@ -351,112 +337,195 @@ transition:0.50s;
   </section>
 
   
-<section id="projects">
-  <div class="d2">
-<h2>Daily JavaScript Practice</h2>
-  <br/>
-<a href="js.html">Js first</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="div.html">Text with Image in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="text1.html">Text in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="createimage.html">Image with Border in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="event1.html">Working With Event in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="date_and_set_interval.html">Date and Set Interval in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="colorplate.html">Colorpallete in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-  <a href="background.html">Random color in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="scrolling_img.html">Scrolling Img in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="loop2.html">Loop in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="loop_photogallery.html">Loop photogallery in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="whileloop.html">Whileloop in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="array2.html">Array in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-  <a href="imageoftheday.html">Image of The Day in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="banner3.html">Banner in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="scrollevent.html">Scrollevent in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="scrollevent2.html">Scrollevent2 in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="keybord.html">Keybord Animation in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="keybord2.html">Keybord Animation with background in JavaScript</a>
-  <br/>
-  <br/>
-  <br/>
-<a href="cursor position.html">Cursor Position in JavaScript</a>
+<section id="first">
 
-  <br/>
-  <br/>
-  <br/>
-<a href="dynamickimage.html">DynamicImage in JavaScript</a>
+  <h2>Daily JavaScript Practice</h2>
 
-  <br/>
-  <br/>
-  <br/>
+  <div class="practices">
 
-<a href="table3.html">Multiplication Table in JavaScript</a>
+    <div class="card">
+        <a href="js.html" alt="first">
+          <img src ="images/js1.jpg" >
+        <h3>Js First</h3>
+        </a>
+      </div>
 
-  <br/>
-  <br/>
-  <br/>
-<a href="percentage.html">Percentage Calculator  in JavaScript</a>
+      <div class="card">
+        <a href="div.html" alt="js2">
+          <img src ="images/p4.jpg">
+        <h3>Text with Image in JavaScript</h3>
+        
+      </a>
+      </div>
+      <div class="card">
+        <a href="text1.html" alt="Menu">
+          <img src ="images/p8.jpg">
+        <h3>Text in JavaScript</h3>
+       
+      </a>
+      </div>
 
-  </div>
+      <div class="card">
+        <a href="createimage.html" alt="js3">
+          <img src ="images/p3.jpg">
+        <h3>Image with border in JavaScript</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="event1.html" alt="event">
+          <img src ="images/b1.jpg">
+        <h3>Working with Event in JavaScript</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="date_and_set_interval.html" alt="date">
+          <img src ="images/js3.jpg">
+        <h3>Date & Set interval in JavaScript</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="colorplate.html" alt="colorplate">
+          <img src ="images/js2.jpg">
+        <h3>Colorpallete in JavaScript</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="background.html" alt="randomcolor">
+          <img src ="images/a6.gif">
+        <h3>Random color in JavaScript</h3>
+       
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="scrolling_img.html" alt="scroll">
+          <img src ="images/s2.jpg">
+        <h3>Scrolling Img in JavaScript</h3>
+       
+      </a>
+      </div>
+
+       <div class="card">
+        <a href="loop2.html" alt="loop">
+          <img src ="images/w1.jpg">
+        <h3>Loop in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="loop_photogallery.html" alt="loop2">
+          <img src ="images/p2.jpg">
+        <h3>Loop photogallery in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="whileloop.html" alt="whileloop">
+          <img src ="images/js4.jpg">
+        <h3>Whileloop in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="array2.html" alt="array">
+          <img src ="images/js5.jpg">
+        <h3>Show News in JavaScript</h3>
+       </a>
+      </div>
+
+       <div class="card">
+        <a href="imageoftheday.html" alt="day">
+          <img src ="images/js6.jpg">
+        <h3>Image of The Day in JavaScript</h3>
+       </a>
+      </div>
+
+       <div class="card">
+        <a href="banner3.html" alt="banner2">
+          <img src ="images/d3.jpg">
+        <h3>Banner in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="scrollevent.html" alt="scrollevent">
+          <img src ="images/js7.jpg">
+        <h3>Scrollevent in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="scrollevent2.html" alt="scrollevent2">
+          <img src ="images/js8.jpg">
+        <h3>Scrollevent 2 in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="keybord.html" alt="keybordani">
+          <img src ="images/bird.gif">
+        <h3>Keybord Animation in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="keybord2.html" alt="keybordani2">
+          <img src ="images/bird.gif">
+        <h3>Keybord Animation with background in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="cursor position.html" alt="cursor">
+          <img src ="images/s1.jpg">
+        <h3>Cursor Position in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="dynamickimage.html" alt="DynamicImage">
+          <img src ="images/a1.gif">
+        <h3>DynamicImage in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="table3.html" alt="table3">
+          <img src ="images/n.png">
+        <h3>Multiplication Table in JavaScript</h3>
+       </a>
+      </div>
+
+       <div class="card">
+        <a href="percentage.html" alt="percentage">
+          <img src ="images/js9.webp">
+        <h3>Percentage Calculator  in JavaScript</h3>
+       </a>
+      </div>
+
+      <div class="card">
+        <a href="agecl.html" alt="age">
+          <img src ="images/js10.jpg">
+        <h3>Age Calculator  in JavaScript</h3>
+       </a>
+      </div>
+
+</div>
 
 </section>
 
-  <section id="projects">
+  <section id="jq">
         <h2>Daily Jquery Practice</h2>
     
-    <div class="projects">
+    <div class="practices">
       
       <div class="card">
         <a href="Jquery/jquery.html" alt="show/hide">
@@ -467,7 +536,7 @@ transition:0.50s;
 
       <div class="card">
         <a href="jq3.html" alt="selector">
-          <img src ="images/p4.jpg">
+          <img src ="images/p5.jpg">
         <h3>Selector  in Jquery</h3>
         
       </a>

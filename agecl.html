@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Age Calculator – Mobile App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('images/w1.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+    }
+
+    .app {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      //background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(20px);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+      z-index: 1;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 28px;
+      color: #f8f7f4;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 26px;
+    }
+
+    label {
+      font-size: 15px;
+      color: #f3f4f6;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    input {
+      padding: 15px;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      outline: none;
+      width: 93%;
+      background: rgba(255,255,255,0.9);
+      transition: 0.2s;
+    }
+
+    input:focus {
+      box-shadow: 0 0 0 2px #dacfa2;
+    }
+
+    button {
+      padding: 15px;
+      border: none;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #1e3170, #3b8df1);
+      color: #fbf9f9;
+      cursor: pointer;
+      transition: transform 0.15s, filter 0.25s;
+    }
+
+    button:hover {
+      filter: brightness(1.1);
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    .result {
+      margin-top: 22px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0,0,0,0.45);
+      padding: 18px;
+      border-radius: 16px;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .countdown {
+      margin-top: 18px;
+      font-size: 16px;
+      color: #272623;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="app">
+    <header>Age Calculator</header>
+    <div class="inputs">
+      <label for="dob">Enter your Date of Birth:</label>
+     <input type="date" id="dob" />
+      <button onclick="calculateAge()">Calculate Age</button>
+    </div>
+    <div class="result" id="result">Your age will appear here</div>
+    <div class="countdown" id="countdown"></div>
+
+  </div>
+
+  <script>
+    function calculateAge() {
+      const dob = document.getElementById('dob').value;
+      const resultBox = document.getElementById('result');
+      const countdownBox = document.getElementById('countdown');
+
+      if (!dob) {
+        resultBox.innerText = 'Please select your date of birth';
+        countdownBox.innerText = '';
+        return;
+      }
+
+      const birthDate = new Date(dob);
+      const today = new Date();
+
+      let ageYears = today.getFullYear() - birthDate.getFullYear();
+      let ageMonths = today.getMonth() - birthDate.getMonth();
+      let ageDays = today.getDate() - birthDate.getDate();
+
+      if (ageDays < 0) {
+        ageMonths--;
+        ageDays += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+      }
+      if (ageMonths < 0) {
+        ageYears--;
+        ageMonths += 12;
+      }
+
+      resultBox.innerText = `🎉 You are ${ageYears} years, ${ageMonths} months, and ${ageDays} days old.`;
+
+      // Next birthday countdown
+      const nextBirthday = new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+      if (nextBirthday < today) {
+        nextBirthday.setFullYear(today.getFullYear() + 1);
+      }
+      const diff = nextBirthday - today;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+      countdownBox.innerText = `🎂 Your next birthday is in ${days} days!`;
+    }
+  </script>
+</body>
+</html>
